@@ -1454,7 +1454,7 @@ static size_t __class__fprintf(struct class *class, const struct cu *cu,
 	if (!cconf.emit_stats)
 		goto out;
 
-	printed += fprintf(fp, "\n%.*s/* size: %d, cachelines: %zd, members: %u",
+	printed += fprintf(fp, "\n%.*s/* size: %d, cachelines: %zd, members: %u, static members: %u",
 			   cconf.indent, tabs,
 			   class__size(class),
 			   tag__nr_cachelines(class__tag(class), cu),
